@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)./Home.html -->
+<html>
+
+<head>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var currentIndex = 0;
+            var imageWidth = 710; // Same as image width
+            var ul = document.querySelector('.inner ul');
+            var totalImages = document.querySelectorAll('.inner li').length;
+
+            document.getElementById('nextButton').addEventListener('click', function() {
+                if (currentIndex < totalImages - 1) {
+                    currentIndex++;
+                    ul.style.left = -(currentIndex * imageWidth) + 'px';
+                }
+            });
+
+            document.getElementById('prevButton').addEventListener('click', function() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    ul.style.left = -(currentIndex * imageWidth) + 'px';
+                }
+            });
+        });
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>智能信息处理实验室：主页</title>
+
+    <link rel="stylesheet" type="text/css" href="./FoodComputing__Home_files/style.css">
+    <!-- modernizr enables HTML5 elements and feature detects -->
+    <script type="text/javascript" src="./FoodComputing__Home_files/modernizr-1.5.min.js.下载"></script>
+    <!--<style>-->
+        <!--* {-->
+            <!--margin: 0;-->
+            <!--padding: 0-->
+        <!--}-->
+
+        <!--.box {-->
+            <!--width: 500px;-->
+            <!--height: 300px;-->
+            <!--border: 1px solid #ccc;-->
+            <!--margin: 100px auto;-->
+            <!--padding: 5px;-->
+        <!--}-->
+
+        <!--/*.inner {*/-->
+            <!--/*width: 500px;*/-->
+            <!--/*height: 300px;*/-->
+            <!--/*position: relative;*/-->
+            <!--/*overflow: hidden;*/-->
+        <!--/*}*/-->
+        <!--.inner {-->
+            <!--display: flex;-->
+            <!--justify-content: center;-->
+            <!--align-items: center;-->
+            <!--width: 500px;-->
+            <!--height: 300px;-->
+            <!--position: relative;-->
+            <!--overflow: hidden;-->
+        <!--}-->
+        <!--.inner img {-->
+            <!--width: 500px;-->
+            <!--height: 300px;-->
+            <!--vertical-align: center;-->
+        <!--}-->
+
+        <!--ul {-->
+            <!--width: 1000%;-->
+            <!--position: absolute;-->
+            <!--list-style: none;-->
+            <!--left: 0;-->
+            <!--top: 0;-->
+        <!--}-->
+
+        <!--.inner li {-->
+            <!--float: left;-->
+        <!--}-->
+
+        <!--ol {-->
+            <!--position: absolute;-->
+            <!--height: 20px;-->
+            <!--right: 20px;-->
+            <!--bottom: 20px;-->
+            <!--text-align: center;-->
+            <!--padding: 5px;-->
+        <!--}-->
+
+        <!--ol li {-->
+            <!--display: inline-block;-->
+            <!--width: 20px;-->
+            <!--height: 20px;-->
+            <!--line-height: 20px;-->
+            <!--background-color: #fff;-->
+            <!--margin: 5px;-->
+            <!--cursor: pointer;-->
+        <!--}-->
+
+        <!--ol .current {-->
+            <!--background-color: red;-->
+        <!--}-->
+    <!--</style>-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 800px;
+            height: 500px;
+            border: 1px solid #ccc;
+            margin: 20px auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .inner {
+            width: 150%;
+            height: 150%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .inner ul {
+            position: absolute;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 9999px; /* Large enough to hold all list items */
+            left: 0;
+            transition: left 0.5s ease-in-out;
+        }
+
+        .inner li {
+            float: left;
+        }
+
+        .inner img {
+            width: 750px; /* Same as .box width */
+            height: 500px; /* Same as .box height */
+
+            object-fit: cover;
+
+        }
+
+        #prevButton, #nextButton {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #fff;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        #prevButton {
+            left: 10px;
+        }
+
+        #nextButton {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="main">
+    <style>
+        header {
+            background-image: url('./FoodComputing__Home_files/11.png'); /* 替换为你的图片路径 */
+            background-size: auto; /* 确保背景图片覆盖整个header */
+            background-position: center; /* 将背景图片居中显示 */
+        }
+    </style>
+    <header>
+        <div id="logo">
+            <div id="logo_text" >
+                 <!--class="logo_colour", allows you to change the colour of the text -->
+                <h1><a href="./Home.html"><span
+                        class="logo_colour"><strong></strong></span></a>
+                </h1>
+                <!--<h2>Food Computing Research Group</h2>-->
+            </div>
+        </div>
+        <!--头部标题-->
+        <nav>
+            <div id="menu_container">
+                <ul class="sf-menu" id="nav">
+                    <li class="selected"><a href="./Home.html">主页</a></li>
+                    <li><a href="./People.html">成员</a></li>
+                    <!--<li><a href="./FoodComputing__Publication.html">发表文章</a></li>-->
+                    <!--<li><a href="./FoodComputing__Dataset.html">Dataset</a></li>-->
+                    <!--<li><a href="./FoodComputing__Talk.html">Talk</a></li>-->
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="site_content">
+
+        <div id="content">
+
+            <h2><strong>
+                <font size="5">欢迎加入智能信息处理实验室!</font>
+
+            </strong></h2>
+            <p>  智能信息处理实验室隶属于鲁东大学，致力于轻量级识别、零样本检测、图像检索三个方向的研究和实际应用。
+                <!--Research activities of the lab include: super-resolution, frame rate conversion, video compression, and video quality assessment.</p>-->
+                <!--Research activities of the lab include: super-resolution, rain removal, low light enhancement, typography (automatic art-deco fonts synthesis and rendering), action analysis and understaning, and video compression.-->
+
+            <h2><strong>
+                <font size="5">组内动态</font>
+
+            </strong></h2>
+            <div class="box" id="box">
+                <div class="inner">
+                    <!--轮播图-->
+                    <ul>
+                        <li>
+                            <div><img src="FoodComputing__People_files/dongtai/图片1 [最大宽度 2400 最大高度 1800].png"
+                                      height="837" width="1204"/></div>
+                        </li>
+                        <li>
+                            <div><img src="./FoodComputing__People_files/dongtai/图片2 [最大宽度 2400 最大高度 1800].png" alt=""></div>
+                        </li>
+                        <li>
+                            <div><img src="./FoodComputing__People_files/dongtai/图片3 [最大宽度 2400 最大高度 1800].png" alt=""></div>
+                        </li>
+                        <li>
+                            <div><img src="./FoodComputing__People_files/dongtai/图片4 [最大宽度 2400 最大高度 1800].png" alt=""></div>
+                        </li>
+                        <li>
+                            <div><img src="./FoodComputing__People_files/dongtai/图片5 [最大宽度 2400 最大高度 1800].png" alt=""></div>
+                        </li>
+                        <li>
+                            <div><img src="./FoodComputing__People_files/dongtai/图片6 [最大宽度 2400 最大高度 1800].png" alt=""></div>
+                        </li>
+                        <li>
+                            <div><img src="./FoodComputing__People_files/dongtai/图片7 [最大宽度 2400 最大高度 1800].png" alt=""></div>
+                        </li>
+                        <li>
+                            <div><img src="./FoodComputing__People_files/dongtai/图片8 [最大宽度 2400 最大高度 1800].png" alt=""></div>
+                        </li>
+                        <li>
+                            <div><img src="./FoodComputing__People_files/dongtai/图片9 [最大宽度 2400 最大高度 1800].png" alt=""></div>
+                        </li>
+                        <li>
+                            <div><img src="./FoodComputing__People_files/dongtai/图片10 [最大宽度 2400 最大高度 1800].png" alt=""></div>
+                        </li>
+                        <li>
+                            <div><img src="./FoodComputing__People_files/dongtai/图片11 [最大宽度 2400 最大高度 1800].png" alt=""></div>
+                        </li>
+                        <li>
+                            <div><img src="./FoodComputing__People_files/dongtai/图片12 [最大宽度 2400 最大高度 1800].png" alt=""></div>
+                        </li>
+                        <li>
+                            <div><img src="./FoodComputing__People_files/dongtai/图片13 [最大宽度 2400 最大高度 1800].png" alt=""></div>
+                        </li>
+                        <li>
+                            <div><img src="./FoodComputing__People_files/dongtai/图片14 [最大宽度 2400 最大高度 1800].png" alt=""></div>
+                        </li>
+                        <li>
+                            <div><img src="./FoodComputing__People_files/dongtai/图片15 [最大宽度 2400 最大高度 1800].png" alt=""></div>
+                        </li>
+                        <li>
+                            <div><img src="./FoodComputing__People_files/dongtai/图片16 [最大宽度 2400 最大高度 1800].png" alt=""></div>
+                        </li>
+                        <li>
+                            <div><img src="./FoodComputing__People_files/dongtai/图片17 [最大宽度 2400 最大高度 1800].png" alt=""></div>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+                <button id="prevButton">Prev</button>
+                <button id="nextButton">Next</button>
+            </div>
+            <!--<script>-->
+                <!--/**-->
+                 <!--*-->
+                 <!--* @param id 传入元素的id-->
+                 <!--* @returns {HTMLElement | null} 返回标签对象，方便获取元素-->
+                 <!--*/-->
+                <!--function my$(id) {-->
+                    <!--return document.getElementById(id);-->
+                <!--}-->
+                <!--//获取各元素，方便操作-->
+                <!--var box = my$("box");-->
+                <!--var inner = box.children[0];-->
+                <!--var ulObj = inner.children[0];-->
+                <!--var list = ulObj.children;-->
+                <!--var olObj = inner.children[1];-->
+                <!--var imgWidth = inner.offsetWidth;-->
+                <!--var right = my$("right");-->
+                <!--var pic = 0;-->
+                <!--//根据li个数，创建小按钮-->
+                <!--for(var i = 0; i < list.length; i++) {-->
+                    <!--var liObj = document.createElement("li");-->
+                    <!--//olObj.appendChild(liObj);-->
+                    <!--liObj.innerText = (i + 1);-->
+                    <!--liObj.setAttribute("index", i);-->
+                    <!--//为按钮注册mouseover事件-->
+                    <!--liObj.onmouseover = function() {-->
+                        <!--//先清除所有按钮的样式-->
+                        <!--for(var j = 0; j < olObj.children.length; j++) {-->
+                            <!--olObj.children[j].removeAttribute("class");-->
+                        <!--}-->
+                        <!--this.className = "current";-->
+                        <!--pic = this.getAttribute("index");-->
+                        <!--animate(ulObj, -pic * imgWidth);-->
+                    <!--}-->
+                <!--}-->
+                <!--//设置ol中第一个li有背景颜色-->
+                <!--//olObj.children[0].className = "current";-->
+                <!--//克隆一个ul中第一个li,加入到ul中的最后=====克隆-->
+                <!--ulObj.appendChild(ulObj.children[0].cloneNode(true));-->
+                <!--var timeId = setInterval(onmouseclickHandle, 4000);-->
+                <!--function onmouseclickHandle() {-->
+                    <!--//如果pic的值是5,恰巧是ul中li的个数-1的值,此时页面显示第六个图片,而用户会认为这是第一个图,-->
+                    <!--//所以,如果用户再次点击按钮,用户应该看到第二个图片-->
+                    <!--if(pic == list.length - 1) {-->
+                        <!--//如何从第6个图,跳转到第一个图-->
+                        <!--pic = 0; //先设置pic=0-->
+                        <!--ulObj.style.left = 0 + "px"; //把ul的位置还原成开始的默认位置-->
+                    <!--}-->
+                    <!--pic++; //立刻设置pic加1,那么此时用户就会看到第二个图片了-->
+                    <!--animate(ulObj, -pic * imgWidth); //pic从0的值加1之后,pic的值是1,然后ul移动出去一个图片-->
+
+                <!--}-->
+                <!--//设置任意的一个元素,移动到指定的目标位置-->
+                <!--function animate(element, target) {-->
+                    <!--clearInterval(element.timeId);-->
+                    <!--//定时器的id值存储到对象的一个属性中-->
+                    <!--element.timeId = setInterval(function() {-->
+                        <!--//获取元素的当前的位置,数字类型-->
+                        <!--var current = element.offsetLeft;-->
+                        <!--//每次移动的距离-->
+                        <!--var step = 10;-->
+                        <!--step = current < target ? step : -step;-->
+                        <!--//当前移动到位置-->
+                        <!--current += step;-->
+                        <!--if(Math.abs(current - target) > Math.abs(step)) {-->
+                            <!--element.style.left = current + "px";-->
+                        <!--} else {-->
+                            <!--//清理定时器-->
+                            <!--clearInterval(element.timeId);-->
+                            <!--//直接到达目标-->
+                            <!--element.style.left = target + "px";-->
+                        <!--}-->
+                    <!--}, 10);-->
+                <!--}-->
+            <!--</script>-->
+            <h2>
+                <font size="5"><strong>近期成果</strong></font>
+            </h2>
+            <font color="#000080"><b><i>Mar. 09, 2024</b></font><br><br>
+            </i>
+            <font color="#666666">
+                <i><p style="text-align:justify; text-justify:inter-ideograph;">论文 "基于增强Vision Transformer的哈希食品图像检索"已在《食品科学》发表。
+                    <!--<a href="https://www.mdpi.com/2304-8158/12/17/3145">-->
+                    <!--<font color="#0000E3">link</font></a>-->
+                </p>
+            </font>
+            <font color="#666666">
+                <p style="margin-top: 10px"><i></p>
+            <font color="#000080"><b><i>Jan. 22, 2024</b></font><br><br>
+            </i>
+            <font color="#666666">
+                <i><p style="text-align:justify; text-justify:inter-ideograph;">论文 "A Lightweight Hybrid Model with Location-Preserving ViT for Efficient Food Recognition"已在二区nutrients发表。
+                    <!--<a href="https://www.mdpi.com/2304-8158/12/17/3145">-->
+                    <!--<font color="#0000E3">link</font></a>-->
+                </p>
+            </font>
+            <font color="#666666">
+                <p style="margin-top: 10px"><i></p>
+
+
+
+                    <font color="#000080"><b><i>Jun. 22, 2023</b></font><br><br>
+                    </i>
+                    <font color="#666666">
+                        <i><p style="text-align:justify; text-justify:inter-ideograph;">获第二十五届中国机器人及人工智能大赛（山东赛区）暨”济南超算杯”第三届山东省机器人及人工智能大赛三等奖。
+                        </p>
+                    </font>
+                    <p></p>
+                <font color="#000080"><b><i>Jun. 9, 2023</b></font><br><br>
+                </i>
+                <font color="#666666">
+                    <i><p style="text-align:justify; text-justify:inter-ideograph;">获第二十五届中国机器人及人工智能大赛（山东赛区）暨”济南超算杯”第三届山东省机器人及人工智能大赛二等奖。
+                    </p>
+                </font>
+                <p></p>
+
+                    <font color="#666666">
+                        <p style="margin-top: 10px"><i></p>
+
+                        <font color="#000080"><b><i>Jun. 8, 2023</b></font><br><br>
+                        </i>
+                        <font color="#666666">
+                            <i><p style="text-align:justify; text-justify:inter-ideograph;">获第二十五届中国机器人及人工智能大赛全国总决赛人工智能创新赛三等奖。
+                                <!--<a href="https://ieeexplore.ieee.org/document/10268369">-->
+                                <!--<font color="#0000E3">link</font></a>-->
+                            </p>
+                        </font>
+                        <p></p>
+            <font color="#000080"><b><i>Sep. 02, 2022</b></font><br><br>
+            </i>
+            <span style="color: #666666; ">
+                <i><p style="text-align:justify; text-justify:inter-ideograph;">  论文"Food recognition via an efficient neural network with transformer grouping"已在SCI一区TOP期刊发表。
+                </p>
+            </span>
+            <p></p>
+            <font color="#666666">
+
+                <p style="margin-top: 10px"><i></p>
+
+                <font color="#000080"><b><i>Aug. 29, 2022</b></font><br><br>
+                </font>
+                <font color="#666666">
+                    <i><p style="text-align:justify; text-justify:inter-ideograph;">  获得第二十四届中国机器人及人工智能大赛全国总决赛人工智能创新赛一等奖。
+                    </p>
+                </font>
+                <p></p>
+                <font color="#666666">
+                    <p style="margin-top: 10px"><i></p>
+
+                    <font color="#000080"><b><i>Jun. 25, 2022</b></font><br><br>
+                    </i>
+                    <font color="#666666">
+                        <i><p style="text-align:justify; text-justify:inter-ideograph;">获得第二十四届中国机器人及人工智能大赛（山东赛区）暨第二届山东省机器人及人工智能大赛二等奖。
+                        </p>
+                    </font>
+                    <p></p>
+                    <font color="#666666">
+                        <p style="margin-top: 10px"><i></p>
+
+
+
+                                    <!--<font color="#666666">-->
+                                        <!--<p style="margin-top: 10px"><i></p>-->
+
+                                        <!--<font color="#000080"><b><i>Jul. 26, 2023</b></font><br><br>-->
+                                        <!--</i>-->
+                                        <!--<font color="#666666">-->
+                                            <!--<i><p style="text-align:justify; text-justify:inter-ideograph;">The paper-->
+                                                <!--"SeeDS: Semantic Separable Diffusion Synthesizer for Zero-shot Food-->
+                                                <!--Detection" has been accepted by ACM MM2023.-->
+                                            <!--</p>-->
+                                        <!--</font>-->
+                                        <!--<p></p>-->
+                                        <!--<font color="#666666">-->
+                                            <!--<p style="margin-top: 10px"><i></p>-->
+
+                                            <!--&lt;!&ndash; <font color="#000080"><b><i>May. 26, 2023</b></font><br><br>-->
+                                                <!--</i>-->
+                                              <!--<font color="#666666">-->
+                                                  <!--<i><p style="text-align:justify; text-justify:inter-ideograph;">The paper "Vision-based fruit recognition via multi-scale attention CNN" has been accepted by Computers and Electronics in Agriculture.-->
+                                                    <!--<a href="https://www.sciencedirect.com/science/article/pii/S0168169923002995?via%3Dihub">-->
+                                                        <!--<font color="#0000E3">link</font></a>-->
+                                                    <!--</p>-->
+                                              <!--</font>-->
+                                            <!--<p></p>-->
+                                            <!--<font color="#666666">-->
+                                              <!--<p style="margin-top: 10px"><i>	</p> &ndash;&gt;-->
+
+                                            <!--<font color="#000080"><b><i>May. 22, 2023</b></font><br><br>-->
+                                            <!--</i>-->
+                                            <!--<font color="#666666">-->
+                                                <!--<i><p style="text-align:justify; text-justify:inter-ideograph;">The-->
+                                                    <!--paper "Towards Food Image Retrieval via Generalization-oriented-->
+                                                    <!--Sampling and Loss Function Design" has been accepted by ACM-->
+                                                    <!--Transactions on Multimedia Computing Communications and-->
+                                                    <!--Applications.-->
+                                                    <!--&lt;!&ndash; <a href="https://ieeexplore.ieee.org/document/10019590">-->
+                                                        <!--<font color="#0000E3">link</font></a> &ndash;&gt;-->
+                                                <!--</p>-->
+                                            <!--</font>-->
+                                            <!--<p></p>-->
+                                            <!--<font color="#666666">-->
+                                                <!--<p style="margin-top: 10px"><i></p>-->
+
+                                                <!--<font color="#000080"><b><i>May. 5, 2023</b></font><br><br>-->
+                                                <!--</i>-->
+                                                <!--<font color="#666666">-->
+                                                    <!--<i><p style="text-align:justify; text-justify:inter-ideograph;">The-->
+                                                        <!--paper "Vision-Based Fruit Recognition via Multi-Scale Attention-->
+                                                        <!--CNN" has been accepted by Computers and Electronics in-->
+                                                        <!--Agriculture.-->
+                                                        <!--&lt;!&ndash; <a href="https://ieeexplore.ieee.org/document/10019590">-->
+                                                            <!--<font color="#0000E3">link</font></a> &ndash;&gt;-->
+                                                    <!--</p>-->
+                                                <!--</font>-->
+                                                <!--<p></p>-->
+                                                <!--<font color="#666666">-->
+                                                    <!--<p style="margin-top: 10px"><i></p>-->
+
+                                                    <!--<font color="#000080"><b><i>May. 3, 2023</b></font><br><br>-->
+                                                    <!--</i>-->
+                                                    <!--<font color="#666666">-->
+                                                        <!--<i><p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                            <!--The paper "Vision-based Food Nutrition Estimation via RGB-D-->
+                                                            <!--Fusion Network" has been accepted by Food Chemistry.-->
+                                                            <!--<a href="https://doi.org/10.1016/j.foodchem.2023.136309">-->
+                                                                <!--<font color="#0000E3">link</font></a>-->
+                                                        <!--</p>-->
+                                                    <!--</font>-->
+                                                    <!--<p></p>-->
+                                                    <!--<font color="#666666">-->
+                                                        <!--<p style="margin-top: 10px"><i></p>-->
+
+                                                        <!--<font color="#000080"><b><i>Apr. 27, 2023</b></font><br><br>-->
+                                                        <!--</i>-->
+                                                        <!--<font color="#666666">-->
+                                                            <!--<i>-->
+                                                                <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                    <!--IEEE TMM Special Issue on When Multimedia Meets-->
+                                                                    <!--Food: Multimedia Computing for Food Data Analysis-->
+                                                                    <!--and Applications due July 1, 2023, and the-->
+                                                                    <!--submission system for this TMM SI is open. <a-->
+                                                                        <!--href="https://mp.weixin.qq.com/s/XSOvkHizfbp_bviN7KZTSA"><font-->
+                                                                        <!--color="#0000E3">link</font></a></p>-->
+                                                        <!--</font>-->
+                                                        <!--<p></p>-->
+                                                        <!--<font color="#666666">-->
+                                                            <!--<p style="margin-top: 10px"><i></p>-->
+
+
+                                                            <!--<font color="#000080"><b><i>Jan. 14, 2023</b></font><br><br>-->
+                                                            <!--</i>-->
+                                                            <!--<font color="#666666">-->
+                                                                <!--<i>-->
+                                                                    <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                        <!--The paper "Large Scale Visual Food Recognition"-->
+                                                                        <!--has been accepted by IEEE Transactions on-->
+                                                                        <!--Pattern Analysis and Machine Intelligence.-->
+                                                                        <!--<a href="https://ieeexplore.ieee.org/document/10019590">-->
+                                                                            <!--<font color="#0000E3">link</font></a>-->
+                                                                    <!--</p>-->
+                                                            <!--</font>-->
+                                                            <!--<p></p>-->
+                                                            <!--<font color="#666666">-->
+                                                                <!--<p style="margin-top: 10px"><i></p>-->
+
+                                                                <!--<font color="#000080"><b><i>Dec. 28, 2022</b></font><br><br>-->
+                                                                <!--</i>-->
+                                                                <!--<font color="#666666">-->
+                                                                    <!--<i>-->
+                                                                        <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                            <!--The paper"A Survey on Future Action-->
+                                                                            <!--Anticipation in Videos" has been accepted by-->
+                                                                            <!--Chinese Journal of Computers.-->
+                                                                            <!--&lt;!&ndash; <a href="https://www.cifst.org.cn/a/dynamic/tongzhi/20221209/2633.html">-->
+                                                                                <!--<font color="#0000E3">link</font></a> &ndash;&gt;-->
+                                                                        <!--</p>-->
+                                                                <!--</font>-->
+                                                                <!--<p></p>-->
+                                                                <!--<font color="#666666">-->
+                                                                    <!--<p style="margin-top: 10px"><i></p>-->
+
+                                                                    <!--<font color="#000080"><b><i>Dec. 12, 2022</b></font><br><br>-->
+                                                                    <!--</i>-->
+                                                                    <!--<font color="#666666">-->
+                                                                        <!--<i>-->
+                                                                            <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                <!--The workshop “Food Computing-->
+                                                                                <!--Technologies and Applications” will be-->
+                                                                                <!--held in conjunction with the 19th Annual-->
+                                                                                <!--Meeting of Chinese Institute of Food-->
+                                                                                <!--Science and Technology (CIFST) on-->
+                                                                                <!--December 15, 2022, and please refer to-->
+                                                                                <!--the website for more details:-->
+                                                                                <!--<a href="https://www.cifst.org.cn/a/dynamic/tongzhi/20221209/2633.html">-->
+                                                                                    <!--<font color="#0000E3">link</font></a>-->
+                                                                            <!--</p>-->
+                                                                    <!--</font>-->
+                                                                    <!--<p></p>-->
+                                                                    <!--<font color="#666666">-->
+                                                                        <!--<p style="margin-top: 10px"><i></p>-->
+
+                                                                        <!--<font color="#000080"><b><i>Aug. 25,-->
+                                                                            <!--2022</b></font><br><br>-->
+                                                                        <!--</i>-->
+                                                                        <!--<font color="#666666">-->
+                                                                            <!--<i>-->
+                                                                                <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                    <!--IEEE TMM Special Issue on When-->
+                                                                                    <!--Multimedia Meets Food: Multimedia-->
+                                                                                    <!--Computing for Food Data Analysis and-->
+                                                                                    <!--Applications due July 1, 2023, and-->
+                                                                                    <!--please refer to the website for more-->
+                                                                                    <!--details:-->
+                                                                                    <!--<a href="https://signalprocessingsociety.org/blog/ieee-tmm-special-issue-when-multimedia-meets-food-multimedia-computing-food-data-analysis-and">-->
+                                                                                        <!--<font color="#0000E3">link</font></a>-->
+                                                                                <!--</p>-->
+                                                                        <!--</font>-->
+                                                                        <!--<p></p>-->
+                                                                        <!--<font color="#666666">-->
+                                                                            <!--<p style="margin-top: 10px"><i></p>-->
+
+                                                                            <!--&lt;!&ndash;-->
+                                                                                            <!--<font color="#000080"><b><i>Aug. 01, 2022</b></font><br><br>-->
+                                                                                                <!--</i>-->
+                                                                                              <!--<font color="#666666">-->
+                                                                                                  <!--<i><p style="text-align:justify; text-justify:inter-ideograph;">The paper “Ingredient-Guided Region Discovery and Relationship Modeling for Food Category-Ingredient Prediction.” is accepted by IEEE Transactions on Image Processing 2022.</p>-->
+                                                                                              <!--</font>-->
+                                                                                            <!--<p></p>-->
+                                                                                            <!--<font color="#666666">-->
+                                                                                              <!--<p style="margin-top: 10px"><i>	</p> &ndash;&gt;-->
+
+                                                                            <!--&lt;!&ndash;-->
+                                                                                            <!--<font color="#000080"><b><i>Jul. 16, 2022</b></font><br><br>-->
+                                                                                                <!--</i>-->
+                                                                                              <!--<font color="#666666">-->
+                                                                                                  <!--<i><p style="text-align:justify; text-justify:inter-ideograph;">The paper “Rethinking the Optimization of Average Precision: Only Penalizing Negative Instances before Positive Ones Is Enough.” is accepted by AAAI2022.</p>-->
+                                                                                              <!--</font>-->
+                                                                                            <!--<p></p>-->
+                                                                                            <!--<font color="#666666">-->
+                                                                                              <!--<p style="margin-top: 10px"><i>	</p> &ndash;&gt;-->
+
+                                                                            <!--<font color="#000080"><b><i>Jul. 10,-->
+                                                                                <!--2022</b></font><br><br>-->
+                                                                            <!--</i>-->
+                                                                            <!--<font color="#666666">-->
+                                                                                <!--<i>-->
+                                                                                    <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                        <!--The paper “Ingredient-Guided-->
+                                                                                        <!--Region Discovery and-->
+                                                                                        <!--Relationship Modeling for Food-->
+                                                                                        <!--Category-Ingredient Prediction”-->
+                                                                                        <!--is accepted by IEEE Transactions-->
+                                                                                        <!--on Image Processing.</p>-->
+                                                                            <!--</font>-->
+                                                                            <!--<p></p>-->
+                                                                            <!--<font color="#666666">-->
+                                                                                <!--<p style="margin-top: 10px"><i></p>-->
+
+
+                                                                                <!--<font color="#000080"><b><i>Jun. 30,-->
+                                                                                    <!--2022</b></font><br><br>-->
+                                                                                <!--</i>-->
+                                                                                <!--<font color="#666666">-->
+                                                                                    <!--<i>-->
+                                                                                        <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                            <!--The workshop “AI4Food: Food-->
+                                                                                            <!--intelligent analysis and-->
+                                                                                            <!--application” will be held in-->
+                                                                                            <!--conjunction with ChinaMM2022-->
+                                                                                            <!--on June 30, 2022, and please-->
+                                                                                            <!--refer to the website for-->
+                                                                                            <!--more details:-->
+                                                                                        <!--</p><a-->
+                                                                                            <!--href="http://chinamm.csig.org.cn/2022/forum.html">-->
+                                                                                        <!--<font color="#0000E3">http://chinamm.csig.org.cn/2022/forum.html</font></a></p>-->
+                                                                                <!--</font>-->
+                                                                                <!--<p></p>-->
+                                                                                <!--<font color="#666666">-->
+                                                                                    <!--<p style="margin-top: 10px"><i></p>-->
+
+                                                                                    <!--<font color="#000080"><b><i>Mar. 8,-->
+                                                                                        <!--2022</b></font><br><br>-->
+                                                                                    <!--</i>-->
+                                                                                    <!--<font color="#666666">-->
+                                                                                        <!--<i>-->
+                                                                                            <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                <!--The paper “Applications-->
+                                                                                                <!--of knowledge graphs for-->
+                                                                                                <!--the food science and-->
+                                                                                                <!--industry” is accepted by-->
+                                                                                                <!--Patterns (Cell-->
+                                                                                                <!--Press).</p>-->
+                                                                                    <!--</font>-->
+                                                                                    <!--<p></p>-->
+                                                                                    <!--<font color="#666666">-->
+                                                                                        <!--<p style="margin-top: 10px"><i>-->
+                                                                                        <!--</p>-->
+
+
+                                                                                        <!--<font color="#000080"><b><i>Feb.-->
+                                                                                            <!--13, 2022</b></font><br><br>-->
+                                                                                        <!--</i>-->
+                                                                                        <!--<font color="#666666">-->
+                                                                                            <!--<i>-->
+                                                                                                <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                    <!--The paper “A review-->
+                                                                                                    <!--on vision-based-->
+                                                                                                    <!--analysis for-->
+                                                                                                    <!--automatic dietary-->
+                                                                                                    <!--assessment” is-->
+                                                                                                    <!--accepted by Trends-->
+                                                                                                    <!--in Food Science &-->
+                                                                                                    <!--Technology-->
+                                                                                                    <!--(IF:16.002). </p>-->
+                                                                                        <!--</font>-->
+                                                                                        <!--<p></p>-->
+                                                                                        <!--<font color="#666666">-->
+                                                                                            <!--<p style="margin-top: 10px">-->
+                                                                                                <!--<i></p>-->
+
+
+                                                                                            <!--<font color="#000080"><b><i>Dec.-->
+                                                                                                <!--1,-->
+                                                                                                <!--2021</b></font><br><br>-->
+                                                                                            <!--</i>-->
+                                                                                            <!--<font color="#666666">-->
+                                                                                                <!--<i>-->
+                                                                                                    <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                        <!--The paper-->
+                                                                                                        <!--“Rethinking the-->
+                                                                                                        <!--Optimization of-->
+                                                                                                        <!--Average-->
+                                                                                                        <!--Precision: Only-->
+                                                                                                        <!--Penalizing-->
+                                                                                                        <!--Negative-->
+                                                                                                        <!--Instances before-->
+                                                                                                        <!--Positive Ones is-->
+                                                                                                        <!--Enough” is-->
+                                                                                                        <!--accepted by-->
+                                                                                                        <!--AAAI2022. </p>-->
+                                                                                            <!--</font>-->
+                                                                                            <!--<p></p>-->
+                                                                                            <!--<font color="#666666">-->
+                                                                                                <!--<p style="margin-top: 10px">-->
+                                                                                                    <!--<i></p>-->
+
+
+                                                                                                <!--<font color="#000080"><b><i>Oct.-->
+                                                                                                    <!--24,-->
+                                                                                                    <!--2021</b></font><br><br>-->
+                                                                                                <!--</i>-->
+                                                                                                <!--<font color="#666666">-->
+                                                                                                    <!--<i>-->
+                                                                                                        <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                            <!--The videos-->
+                                                                                                            <!--of the-->
+                                                                                                            <!--ICCV2021-->
+                                                                                                            <!--workshop-->
+                                                                                                            <!--“LargeFineFoodAI:-->
+                                                                                                            <!--Large-Scale-->
+                                                                                                            <!--Fine-Grained-->
+                                                                                                            <!--Food-->
+                                                                                                            <!--AnalysIs”-->
+                                                                                                            <!--can be-->
+                                                                                                            <!--available-->
+                                                                                                            <!--from the-->
+                                                                                                            <!--website: </p>-->
+                                                                                                        <!--<a href="https://foodai-workshop.meituan.com/foodai2021.html#index">-->
+                                                                                                            <!--<font color="#0000E3">https://foodai-workshop.meituan.com/foodai2021.html#index</font></a>-->
+                                                                                                <!--</font>-->
+                                                                                                <!--<p></p>-->
+                                                                                                <!--<font color="#666666">-->
+                                                                                                    <!--<p style="margin-top: 10px">-->
+                                                                                                        <!--<i></p>-->
+
+
+                                                                                                    <!--<font color="#000080"><b><i>Oct.-->
+                                                                                                        <!--11,-->
+                                                                                                        <!--2021</b></font><br><br>-->
+                                                                                                    <!--</i>-->
+                                                                                                    <!--<font color="#666666">-->
+                                                                                                        <!--<i>-->
+                                                                                                            <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                                <!--The-->
+                                                                                                                <!--workshop-->
+                                                                                                                <!--“LargeFineFoodAI:-->
+                                                                                                                <!--Large-Scale-->
+                                                                                                                <!--Fine-Grained-->
+                                                                                                                <!--Food-->
+                                                                                                                <!--AnalysIs”-->
+                                                                                                                <!--will be-->
+                                                                                                                <!--held in-->
+                                                                                                                <!--conjunction-->
+                                                                                                                <!--with-->
+                                                                                                                <!--ICCV on-->
+                                                                                                                <!--October-->
+                                                                                                                <!--16,-->
+                                                                                                                <!--2021,-->
+                                                                                                                <!--and-->
+                                                                                                                <!--please-->
+                                                                                                                <!--refer to-->
+                                                                                                                <!--the-->
+                                                                                                                <!--website-->
+                                                                                                                <!--for more-->
+                                                                                                                <!--details:-->
+                                                                                                                <!--<a href="https://foodai-workshop.meituan.com/foodai2021.html#index">-->
+                                                                                                                    <!--<font color="#0000E3">https://foodai-workshop.meituan.com/foodai2021.html#index</font></a>-->
+                                                                                                            <!--</p>-->
+                                                                                                    <!--</font>-->
+                                                                                                    <!--</p>-->
+                                                                                                    <!--<font color="#666666">-->
+                                                                                                        <!--<p style="margin-top: 10px">-->
+                                                                                                            <!--<i>-->
+
+
+                                                                                                                <!--<font color="#000080"><b><i>Jul.-->
+                                                                                                                    <!--5,-->
+                                                                                                                    <!--2021</b></font><br><br>-->
+                                                                                                            <!--</i>-->
+                                                                                                            <!--<font color="#666666">-->
+                                                                                                                <!--<i>-->
+                                                                                                                    <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                                        <!--The-->
+                                                                                                                        <!--paper-->
+                                                                                                                        <!--“FoodLogoDet-1500:-->
+                                                                                                                        <!--A-->
+                                                                                                                        <!--Dataset-->
+                                                                                                                        <!--for-->
+                                                                                                                        <!--Large-Scale-->
+                                                                                                                        <!--Food-->
+                                                                                                                        <!--Logo-->
+                                                                                                                        <!--Detection-->
+                                                                                                                        <!--via-->
+                                                                                                                        <!--Multi-Scale-->
+                                                                                                                        <!--Feature-->
+                                                                                                                        <!--Decoupling-->
+                                                                                                                        <!--Network”-->
+                                                                                                                        <!--is-->
+                                                                                                                        <!--accepted-->
+                                                                                                                        <!--by-->
+                                                                                                                        <!--ACM-->
+                                                                                                                        <!--MM2021. </p>-->
+                                                                                                            <!--</font>-->
+                                                                                                        <!--</p>-->
+                                                                                                        <!--<font color="#666666">-->
+                                                                                                            <!--<p style="margin-top: 10px">-->
+                                                                                                                <!--<i>-->
+
+                                                                                                                    <!--<font color="#000080"><b><i>May-->
+                                                                                                                        <!--26,-->
+                                                                                                                        <!--2021</b></font><br><br>-->
+                                                                                                                <!--</i>-->
+                                                                                                                <!--<font color="#666666">-->
+                                                                                                                    <!--<i>-->
+                                                                                                                        <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                                            <!--Dr.-->
+                                                                                                                            <!--Weiqing-->
+                                                                                                                            <!--Min-->
+                                                                                                                            <!--was-->
+                                                                                                                            <!--selected-->
+                                                                                                                            <!--as-->
+                                                                                                                            <!--one-->
+                                                                                                                            <!--Member-->
+                                                                                                                            <!--of-->
+                                                                                                                            <!--the-->
+                                                                                                                            <!--Youth-->
+                                                                                                                            <!--Editorial-->
+                                                                                                                            <!--Board-->
+                                                                                                                            <!--of-->
+                                                                                                                            <!--Smart-->
+                                                                                                                            <!--Agriculture.</p>-->
+                                                                                                                <!--</font>-->
+                                                                                                            <!--</p>-->
+                                                                                                            <!--<font color="#666666">-->
+                                                                                                                <!--<p style="margin-top: 10px">-->
+                                                                                                                    <!--<i>-->
+
+
+                                                                                                                        <!--<font color="#000080"><b><i>Apr.-->
+                                                                                                                            <!--29,-->
+                                                                                                                            <!--2021</b></font><br><br>-->
+                                                                                                                    <!--</i>-->
+                                                                                                                    <!--<font color="#666666">-->
+                                                                                                                        <!--<i>-->
+                                                                                                                            <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                                                <!--The-->
+                                                                                                                                <!--paper-->
+                                                                                                                                <!--“What-->
+                                                                                                                                <!--If-->
+                                                                                                                                <!--We-->
+                                                                                                                                <!--Could-->
+                                                                                                                                <!--Not-->
+                                                                                                                                <!--See?-->
+                                                                                                                                <!--Counterfactual-->
+                                                                                                                                <!--Analysis-->
+                                                                                                                                <!--for-->
+                                                                                                                                <!--Egocentric-->
+                                                                                                                                <!--Action-->
+                                                                                                                                <!--Anticipation”-->
+                                                                                                                                <!--is-->
+                                                                                                                                <!--accepted-->
+                                                                                                                                <!--by-->
+                                                                                                                                <!--IJCAI-->
+                                                                                                                                <!--2021. </p>-->
+                                                                                                                    <!--</font>-->
+                                                                                                                <!--</p>-->
+                                                                                                                <!--<font color="#666666">-->
+                                                                                                                    <!--<p style="margin-top: 10px">-->
+                                                                                                                        <!--<i>-->
+
+
+                                                                                                                            <!--<font color="#000080"><b><i>Apr.-->
+                                                                                                                                <!--9,-->
+                                                                                                                                <!--2021</b></font><br><br>-->
+                                                                                                                        <!--</i>-->
+                                                                                                                        <!--<font color="#666666">-->
+                                                                                                                            <!--<i>-->
+                                                                                                                                <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                                                    <!--The-->
+                                                                                                                                    <!--workshop-->
+                                                                                                                                    <!--“LargeFineFoodAI:-->
+                                                                                                                                    <!--Large-Scale-->
+                                                                                                                                    <!--Fine-Grained-->
+                                                                                                                                    <!--Food-->
+                                                                                                                                    <!--AnalysIs”-->
+                                                                                                                                    <!--will-->
+                                                                                                                                    <!--be-->
+                                                                                                                                    <!--held-->
+                                                                                                                                    <!--in-->
+                                                                                                                                    <!--conjunction-->
+                                                                                                                                    <!--with-->
+                                                                                                                                    <!--ICCV-->
+                                                                                                                                    <!--2021.-->
+                                                                                                                                    <!--<a href="https://foodai-workshop.meituan.com/foodai2021.html#index">-->
+                                                                                                                                        <!--<font color="#0000E3">[link]</font></a>-->
+                                                                                                                                <!--</p>-->
+                                                                                                                        <!--</font>-->
+                                                                                                                    <!--</p>-->
+                                                                                                                    <!--<font color="#666666">-->
+                                                                                                                        <!--<p style="margin-top: 10px">-->
+                                                                                                                            <!--<i>-->
+
+                                                                                                                                <!--<font color="#000080"><b><i>Mar.-->
+                                                                                                                                    <!--29,-->
+                                                                                                                                    <!--2021</b></font><br><br>-->
+                                                                                                                            <!--</i>-->
+                                                                                                                            <!--<font color="#666666">-->
+                                                                                                                                <!--<i>-->
+                                                                                                                                    <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                                                        <!--The-->
+                                                                                                                                        <!--workshop-->
+                                                                                                                                        <!--“AI-->
+                                                                                                                                        <!--&-->
+                                                                                                                                        <!--Food:-->
+                                                                                                                                        <!--AIxFood2021”-->
+                                                                                                                                        <!--will-->
+                                                                                                                                        <!--be-->
+                                                                                                                                        <!--held-->
+                                                                                                                                        <!--in-->
+                                                                                                                                        <!--conjunction-->
+                                                                                                                                        <!--with-->
+                                                                                                                                        <!--ACM-->
+                                                                                                                                        <!--Multimedia-->
+                                                                                                                                        <!--2021.-->
+                                                                                                                                        <!--<a href="https://sites.google.com/view/acmmm2021aixfood/home">-->
+                                                                                                                                            <!--<font color="#0000E3">[link]</font></a>-->
+                                                                                                                                    <!--</p>-->
+                                                                                                                            <!--</font>-->
+                                                                                                                        <!--</p>-->
+                                                                                                                        <!--<font color="#666666">-->
+                                                                                                                            <!--<p style="margin-top: 10px">-->
+                                                                                                                                <!--<i>-->
+
+
+                                                                                                                                    <!--<font color="#000080"><b><i>Mar.-->
+                                                                                                                                        <!--9,-->
+                                                                                                                                        <!--2021</b></font><br><br>-->
+                                                                                                                                <!--</i>-->
+                                                                                                                                <!--<font color="#666666">-->
+                                                                                                                                    <!--<i>-->
+                                                                                                                                        <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                                                            <!--The-->
+                                                                                                                                            <!--paper"A-->
+                                                                                                                                            <!--Survey-->
+                                                                                                                                            <!--on-->
+                                                                                                                                            <!--Food-->
+                                                                                                                                            <!--Image-->
+                                                                                                                                            <!--Recognition"-->
+                                                                                                                                            <!--has-->
+                                                                                                                                            <!--been-->
+                                                                                                                                            <!--accepted-->
+                                                                                                                                            <!--by-->
+                                                                                                                                            <!--Chinese-->
+                                                                                                                                            <!--Journal-->
+                                                                                                                                            <!--of-->
+                                                                                                                                            <!--Computers(计算机学报).-->
+                                                                                                                                            <!--<a href="https://cjc.ict.ac.cn/online/onlinepaper/MWQ315.pdf">-->
+                                                                                                                                                <!--<font color="#0000E3">[link]</font></a>-->
+                                                                                                                                        <!--</p>-->
+                                                                                                                                <!--</font>-->
+                                                                                                                            <!--</p>-->
+                                                                                                                            <!--<font color="#666666">-->
+                                                                                                                                <!--<p style="margin-top: 10px">-->
+                                                                                                                                    <!--<i>-->
+
+
+                                                                                                                                        <!--<font color="#000080"><b><i>Feb.-->
+                                                                                                                                            <!--22,-->
+                                                                                                                                            <!--2021</b></font><br><br>-->
+                                                                                                                                    <!--</i>-->
+                                                                                                                                    <!--<font color="#666666">-->
+                                                                                                                                        <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                                                            <!--The-->
+                                                                                                                                            <!--paper"Food-->
+                                                                                                                                            <!--Image-->
+                                                                                                                                            <!--Recognition-->
+                                                                                                                                            <!--via-->
+                                                                                                                                            <!--Multi-scale-->
+                                                                                                                                            <!--Jigsaw-->
+                                                                                                                                            <!--and-->
+                                                                                                                                            <!--Reconstruction-->
+                                                                                                                                            <!--Network"-->
+                                                                                                                                            <!--has-->
+                                                                                                                                            <!--been-->
+                                                                                                                                            <!--accepted-->
+                                                                                                                                            <!--by-->
+                                                                                                                                            <!--Journal-->
+                                                                                                                                            <!--of-->
+                                                                                                                                            <!--Software(软件学报). </p>-->
+                                                                                                                                    <!--</font>-->
+                                                                                                                                <!--</p>-->
+                                                                                                                                <!--<font color="#666666">-->
+                                                                                                                                    <!--<p style="margin-top: 10px">-->
+                                                                                                                                        <!--<i>-->
+
+
+                                                                                                                                            <!--<font color="#000080"><b>-->
+                                                                                                                                                <!--Dec.-->
+                                                                                                                                                <!--29,-->
+                                                                                                                                                <!--2020</b></font><br>-->
+                                                                                                                                        <!--</i>-->
+                                                                                                                                        <!--<font color="#666666">-->
+                                                                                                                                            <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                                                                <!--The-->
+                                                                                                                                                <!--paper"Plant-->
+                                                                                                                                                <!--Disease-->
+                                                                                                                                                <!--Recognition:-->
+                                                                                                                                                <!--A-->
+                                                                                                                                                <!--Large-Scale-->
+                                                                                                                                                <!--Benchmark-->
+                                                                                                                                                <!--Dataset-->
+                                                                                                                                                <!--and-->
+                                                                                                                                                <!--a-->
+                                                                                                                                                <!--Visual-->
+                                                                                                                                                <!--Region-->
+                                                                                                                                                <!--and-->
+                                                                                                                                                <!--Loss-->
+                                                                                                                                                <!--Reweighting-->
+                                                                                                                                                <!--Approach"-->
+                                                                                                                                                <!--has-->
+                                                                                                                                                <!--been-->
+                                                                                                                                                <!--accepted-->
+                                                                                                                                                <!--by-->
+                                                                                                                                                <!--IEEE-->
+                                                                                                                                                <!--Transactions-->
+                                                                                                                                                <!--on-->
+                                                                                                                                                <!--Image-->
+                                                                                                                                                <!--Processing.-->
+                                                                                                                                            <!--</p>-->
+                                                                                                                                        <!--</font>-->
+                                                                                                                                    <!--</p>-->
+                                                                                                                                    <!--<font color="#666666">-->
+
+                                                                                                                                        <!--<p style="margin-top: 10px">-->
+                                                                                                                                            <!--<i>-->
+                                                                                                                                                <!--<font color="#000080"><b>-->
+                                                                                                                                                    <!--Jul.-->
+                                                                                                                                                    <!--29,-->
+                                                                                                                                                    <!--2020</b></font><br>-->
+                                                                                                                                            <!--</i>-->
+                                                                                                                                            <!--<font color="#666666">-->
+                                                                                                                                                <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                                                                    <!--Our-->
+                                                                                                                                                    <!--tutorial-->
+                                                                                                                                                    <!--about-->
+                                                                                                                                                    <!--food-->
+                                                                                                                                                    <!--computing-->
+                                                                                                                                                    <!--for-->
+                                                                                                                                                    <!--multimedia-->
+                                                                                                                                                    <!--is-->
+                                                                                                                                                    <!--accepted-->
+                                                                                                                                                    <!--by-->
+                                                                                                                                                    <!--ACM-->
+                                                                                                                                                    <!--MM2020!-->
+                                                                                                                                                <!--</p>-->
+                                                                                                                                            <!--</font>-->
+                                                                                                                                        <!--</p>-->
+                                                                                                                                        <!--<font color="#666666">-->
+
+                                                                                                                                            <!--<p style="margin-top: 10px">-->
+                                                                                                                                                <!--<i>-->
+                                                                                                                                                    <!--<font color="#000080"><b>-->
+                                                                                                                                                        <!--Jul.-->
+                                                                                                                                                        <!--26,-->
+                                                                                                                                                        <!--2020</b></font><br>-->
+                                                                                                                                                <!--</i>-->
+                                                                                                                                                <!--<font color="#666666">-->
+                                                                                                                                                    <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                                                                        <!--Two-->
+                                                                                                                                                        <!--papers-->
+                                                                                                                                                        <!--"ISIA-->
+                                                                                                                                                        <!--Food-500:-->
+                                                                                                                                                        <!--A-->
+                                                                                                                                                        <!--Dataset-->
+                                                                                                                                                        <!--for-->
+                                                                                                                                                        <!--Large-Scale-->
+                                                                                                                                                        <!--Food-->
+                                                                                                                                                        <!--Recognition-->
+                                                                                                                                                        <!--via-->
+                                                                                                                                                        <!--Stacked-->
+                                                                                                                                                        <!--Global-Local-->
+                                                                                                                                                        <!--Attention-->
+                                                                                                                                                        <!--Network"-->
+                                                                                                                                                        <!--and-->
+                                                                                                                                                        <!--"An-->
+                                                                                                                                                        <!--Egocentric-->
+                                                                                                                                                        <!--Action-->
+                                                                                                                                                        <!--Anticipation-->
+                                                                                                                                                        <!--Framework-->
+                                                                                                                                                        <!--via-->
+                                                                                                                                                        <!--Fusing-->
+                                                                                                                                                        <!--Intuition-->
+                                                                                                                                                        <!--and-->
+                                                                                                                                                        <!--Analysis"-->
+                                                                                                                                                        <!--have-->
+                                                                                                                                                        <!--been-->
+                                                                                                                                                        <!--accepted-->
+                                                                                                                                                        <!--by-->
+                                                                                                                                                        <!--ACMMM2020.-->
+                                                                                                                                                    <!--</p>-->
+                                                                                                                                                <!--</font>-->
+                                                                                                                                            <!--</p>-->
+                                                                                                                                            <!--<font color="#666666">-->
+
+                                                                                                                                                <!--<p style="margin-top: 10px">-->
+                                                                                                                                                    <!--<i>-->
+                                                                                                                                                        <!--<font color="#000080"><b>-->
+                                                                                                                                                            <!--Apr.-->
+                                                                                                                                                            <!--26,-->
+                                                                                                                                                            <!--2020</b></font><br>-->
+                                                                                                                                                    <!--</i>-->
+                                                                                                                                                    <!--<font color="#666666">-->
+                                                                                                                                                        <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                                                                            <!--Congradulations!-->
+                                                                                                                                                            <!--Linhu-->
+                                                                                                                                                            <!--Liu-->
+                                                                                                                                                            <!--and-->
+                                                                                                                                                            <!--Zhengdong-->
+                                                                                                                                                            <!--luo-->
+                                                                                                                                                            <!--successfully-->
+                                                                                                                                                            <!--defended-->
+                                                                                                                                                            <!--their-->
+                                                                                                                                                            <!--thesis.-->
+                                                                                                                                                        <!--</p>-->
+                                                                                                                                                    <!--</font>-->
+                                                                                                                                                <!--</p>-->
+                                                                                                                                                <!--<font color="#666666">-->
+
+                                                                                                                                                    <!--<p style="margin-top: 10px">-->
+                                                                                                                                                        <!--<i>-->
+                                                                                                                                                            <!--<font color="#000080"><b>-->
+                                                                                                                                                                <!--Mar.-->
+                                                                                                                                                                <!--28,-->
+                                                                                                                                                                <!--2020</b></font><br>-->
+                                                                                                                                                        <!--</i>-->
+                                                                                                                                                        <!--<font color="#666666">-->
+                                                                                                                                                            <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                                                                                <!--The-->
+                                                                                                                                                                <!--paper-->
+                                                                                                                                                                <!--“Few-Shot-->
+                                                                                                                                                                <!--Food-->
+                                                                                                                                                                <!--Recognition-->
+                                                                                                                                                                <!--via-->
+                                                                                                                                                                <!--Multi-View-->
+                                                                                                                                                                <!--Representation-->
+                                                                                                                                                                <!--Learning”-->
+                                                                                                                                                                <!--has-->
+                                                                                                                                                                <!--been-->
+                                                                                                                                                                <!--accepted-->
+                                                                                                                                                                <!--by-->
+                                                                                                                                                                <!--ACM-->
+                                                                                                                                                                <!--Trans.-->
+                                                                                                                                                                <!--on-->
+                                                                                                                                                                <!--Multimedia-->
+                                                                                                                                                                <!--Computing,-->
+                                                                                                                                                                <!--Communications,-->
+                                                                                                                                                                <!--and-->
+                                                                                                                                                                <!--Applications.</p>-->
+                                                                                                                                                        <!--</font>-->
+                                                                                                                                                    <!--</p>-->
+                                                                                                                                                    <!--<font color="#666666">-->
+
+                                                                                                                                                        <!--<p style="margin-top: 10px">-->
+                                                                                                                                                            <!--<i>-->
+                                                                                                                                                                <!--<font color="#000080"><b>-->
+                                                                                                                                                                    <!--Mar.26,-->
+                                                                                                                                                                    <!--2020</b></font><br>-->
+                                                                                                                                                            <!--</i>-->
+                                                                                                                                                            <!--<font color="#666666">-->
+                                                                                                                                                                <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                                                                                    <!--The-->
+                                                                                                                                                                    <!--2nd-->
+                                                                                                                                                                    <!--International-->
+                                                                                                                                                                    <!--Workshop-->
+                                                                                                                                                                    <!--on-->
+                                                                                                                                                                    <!--AI-->
+                                                                                                                                                                    <!--&-->
+                                                                                                                                                                    <!--Food-->
+                                                                                                                                                                    <!--(AIxFood)-->
+                                                                                                                                                                    <!--will-->
+                                                                                                                                                                    <!--be-->
+                                                                                                                                                                    <!--held-->
+                                                                                                                                                                    <!--in-->
+                                                                                                                                                                    <!--conjunction-->
+                                                                                                                                                                    <!--with-->
+                                                                                                                                                                    <!--IJCAI2020-->
+                                                                                                                                                                    <!--in-->
+                                                                                                                                                                    <!--Yokohama,-->
+                                                                                                                                                                    <!--Japan.-->
+                                                                                                                                                                    <!--Abstract-->
+                                                                                                                                                                    <!--submission-->
+                                                                                                                                                                    <!--deadline:-->
+                                                                                                                                                                    <!--1-->
+                                                                                                                                                                    <!--May-->
+                                                                                                                                                                    <!--2020.-->
+                                                                                                                                                                    <!--<a href="https://sites.google.com/view/ijcai2020aixfood"-->
+                                                                                                                                                                       <!--target="_blank">-->
+                                                                                                                                                                        <!--<font color="#00FF00">Links</font>-->
+                                                                                                                                                                    <!--</a>-->
+                                                                                                                                                                <!--</p>-->
+                                                                                                                                                            <!--</font>-->
+                                                                                                                                                        <!--</p>-->
+                                                                                                                                                        <!--<font color="#666666">-->
+
+                                                                                                                                                            <!--<p style="margin-top: 10px">-->
+                                                                                                                                                                <!--<i>-->
+                                                                                                                                                                    <!--<font color="#000080"><b>Nov.-->
+                                                                                                                                                                        <!--27,-->
+                                                                                                                                                                        <!--2019</b></font><br>-->
+                                                                                                                                                                <!--</i>-->
+                                                                                                                                                                <!--<font color="#666666">-->
+                                                                                                                                                                    <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                                                                                        <!--Dr.-->
+                                                                                                                                                                        <!--Jiang-->
+                                                                                                                                                                        <!--and-->
+                                                                                                                                                                        <!--Dr.-->
+                                                                                                                                                                        <!--Min-->
+                                                                                                                                                                        <!--gave-->
+                                                                                                                                                                        <!--invited-->
+                                                                                                                                                                        <!--talks-->
+                                                                                                                                                                        <!--on-->
+                                                                                                                                                                        <!--"Food-->
+                                                                                                                                                                        <!--computing"-->
+                                                                                                                                                                        <!--at-->
+                                                                                                                                                                        <!--the-->
+                                                                                                                                                                        <!--MEITUAN-->
+                                                                                                                                                                        <!--DIANPING-->
+                                                                                                                                                                        <!--in-->
+                                                                                                                                                                        <!--November-->
+                                                                                                                                                                        <!--2019.</p>-->
+                                                                                                                                                                <!--</font>-->
+                                                                                                                                                            <!--</p>-->
+                                                                                                                                                            <!--<font color="#666666">-->
+
+                                                                                                                                                                <!--<p style="margin-top: 10px">-->
+                                                                                                                                                                    <!--<i>-->
+                                                                                                                                                                        <!--<font color="#000080"><b>Nov.-->
+                                                                                                                                                                            <!--18,-->
+                                                                                                                                                                            <!--2019</b></font><br>-->
+                                                                                                                                                                    <!--</i>-->
+                                                                                                                                                                    <!--<font color="#666666">-->
+                                                                                                                                                                        <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                                                                                            <!--The-->
+                                                                                                                                                                            <!--paper-->
+                                                                                                                                                                            <!--“Food-->
+                                                                                                                                                                            <!--Recommendation:-->
+                                                                                                                                                                            <!--Framework,-->
+                                                                                                                                                                            <!--Existing-->
+                                                                                                                                                                            <!--Solutions-->
+                                                                                                                                                                            <!--and-->
+                                                                                                                                                                            <!--Challenges”-->
+                                                                                                                                                                            <!--has-->
+                                                                                                                                                                            <!--been-->
+                                                                                                                                                                            <!--accepted-->
+                                                                                                                                                                            <!--by-->
+                                                                                                                                                                            <!--IEEE-->
+                                                                                                                                                                            <!--Transactions-->
+                                                                                                                                                                            <!--on-->
+                                                                                                                                                                            <!--Multimedia.-->
+                                                                                                                                                                        <!--</p>-->
+                                                                                                                                                                    <!--</font>-->
+                                                                                                                                                                <!--</p>-->
+                                                                                                                                                                <!--<font color="#666666">-->
+
+                                                                                                                                                                    <!--<p style="margin-top: 10px">-->
+                                                                                                                                                                        <!--<i>-->
+                                                                                                                                                                            <!--<font color="#000080"><b>Jul.-->
+                                                                                                                                                                                <!--11,-->
+                                                                                                                                                                                <!--2019</b></font><br>-->
+                                                                                                                                                                        <!--</i>-->
+                                                                                                                                                                        <!--<font color="#666666">-->
+                                                                                                                                                                            <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                                                                                                <!--The-->
+                                                                                                                                                                                <!--paper-->
+                                                                                                                                                                                <!--“Multi-Scale-->
+                                                                                                                                                                                <!--Multi-View-->
+                                                                                                                                                                                <!--Deep-->
+                                                                                                                                                                                <!--Feature-->
+                                                                                                                                                                                <!--Aggregation-->
+                                                                                                                                                                                <!--for-->
+                                                                                                                                                                                <!--Food-->
+                                                                                                                                                                                <!--Recognition”-->
+                                                                                                                                                                                <!--has-->
+                                                                                                                                                                                <!--been-->
+                                                                                                                                                                                <!--accepted-->
+                                                                                                                                                                                <!--by-->
+                                                                                                                                                                                <!--IEEE-->
+                                                                                                                                                                                <!--Transactions-->
+                                                                                                                                                                                <!--on-->
+                                                                                                                                                                                <!--Image-->
+                                                                                                                                                                                <!--Processing-->
+                                                                                                                                                                            <!--</p>-->
+                                                                                                                                                                        <!--</font>-->
+                                                                                                                                                                    <!--</p>-->
+                                                                                                                                                                    <!--<font color="#666666">-->
+
+                                                                                                                                                                        <!--<p style="margin-top: 10px">-->
+                                                                                                                                                                            <!--<i>-->
+                                                                                                                                                                                <!--<font color="#000080"><b>Jul.-->
+                                                                                                                                                                                    <!--2,-->
+                                                                                                                                                                                    <!--2019</b></font><br>-->
+                                                                                                                                                                            <!--</i>-->
+                                                                                                                                                                            <!--<font color="#666666">-->
+                                                                                                                                                                                <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                                                                                                    <!--The-->
+                                                                                                                                                                                    <!--paper-->
+                                                                                                                                                                                    <!--“Ingredient-Guided-->
+                                                                                                                                                                                    <!--Cascaded-->
+                                                                                                                                                                                    <!--Multi-Attention-->
+                                                                                                                                                                                    <!--Network-->
+                                                                                                                                                                                    <!--for-->
+                                                                                                                                                                                    <!--Food-->
+                                                                                                                                                                                    <!--Recognition”-->
+                                                                                                                                                                                    <!--has-->
+                                                                                                                                                                                    <!--been-->
+                                                                                                                                                                                    <!--accepted-->
+                                                                                                                                                                                    <!--by-->
+                                                                                                                                                                                    <!--ACMMM2019.</p>-->
+                                                                                                                                                                            <!--</font>-->
+                                                                                                                                                                        <!--</p>-->
+                                                                                                                                                                        <!--<font color="#666666">-->
+                                                                                                                                                                            <!--&lt;!&ndash;<p style="margin-top: 10px"><font color="#000080"><a href="./news.html">More...</a></font></p>&ndash;&gt;-->
+                                                                                                                                                                            <!--<p style="margin-top: 10px">-->
+                                                                                                                                                                                <!--<i>-->
+                                                                                                                                                                                    <!--<font color="#000080"><b>Apr.-->
+                                                                                                                                                                                        <!--30,-->
+                                                                                                                                                                                        <!--2019</b></font><br>-->
+                                                                                                                                                                                <!--</i>-->
+                                                                                                                                                                                <!--<font color="#666666">-->
+                                                                                                                                                                                    <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                                                                                                        <!--The-->
+                                                                                                                                                                                        <!--paper-->
+                                                                                                                                                                                        <!--“A-->
+                                                                                                                                                                                        <!--Survey-->
+                                                                                                                                                                                        <!--on-->
+                                                                                                                                                                                        <!--Food-->
+                                                                                                                                                                                        <!--Computing”has-->
+                                                                                                                                                                                        <!--been-->
+                                                                                                                                                                                        <!--accepted-->
+                                                                                                                                                                                        <!--by-->
+                                                                                                                                                                                        <!--ACM-->
+                                                                                                                                                                                        <!--Computing-->
+                                                                                                                                                                                        <!--Surveys.-->
+                                                                                                                                                                                <!--</font>-->
+                                                                                                                                                                            <!--</p>-->
+                                                                                                                                                                            <!--<font color="#666666">-->
+
+                                                                                                                                                                                <!--<p style="margin-top: 10px">-->
+                                                                                                                                                                                    <!--<i>-->
+                                                                                                                                                                                        <!--<font color="#000080"><b>Sept.-->
+                                                                                                                                                                                            <!--4,-->
+                                                                                                                                                                                            <!--2017</b></font><br>-->
+                                                                                                                                                                                    <!--</i>-->
+                                                                                                                                                                                    <!--<font color="#666666">-->
+                                                                                                                                                                                        <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                                                                                                            <!--The-->
+                                                                                                                                                                                            <!--paper-->
+                                                                                                                                                                                            <!--“You-->
+                                                                                                                                                                                            <!--Are-->
+                                                                                                                                                                                            <!--What-->
+                                                                                                                                                                                            <!--You-->
+                                                                                                                                                                                            <!--Eat:-->
+                                                                                                                                                                                            <!--Exploring-->
+                                                                                                                                                                                            <!--Rich-->
+                                                                                                                                                                                            <!--Recipe-->
+                                                                                                                                                                                            <!--Information-->
+                                                                                                                                                                                            <!--for-->
+                                                                                                                                                                                            <!--Cross-Region-->
+                                                                                                                                                                                            <!--Food-->
+                                                                                                                                                                                            <!--Analysis”has-->
+                                                                                                                                                                                            <!--been-->
+                                                                                                                                                                                            <!--accepted-->
+                                                                                                                                                                                            <!--by-->
+                                                                                                                                                                                            <!--IEEE-->
+                                                                                                                                                                                            <!--Transactions-->
+                                                                                                                                                                                            <!--on-->
+                                                                                                                                                                                            <!--Multimedia.</p>-->
+                                                                                                                                                                                    <!--</font>-->
+                                                                                                                                                                                <!--</p>-->
+                                                                                                                                                                                <!--<font color="#666666">-->
+                                                                                                                                                                                    <!--<p style="margin-top: 10px">-->
+                                                                                                                                                                                        <!--<i>-->
+                                                                                                                                                                                            <!--<font color="#000080"><b>Jul.-->
+                                                                                                                                                                                                <!--3,-->
+                                                                                                                                                                                                <!--2017</b></font><br>-->
+                                                                                                                                                                                        <!--</i>-->
+                                                                                                                                                                                        <!--<font color="#666666">-->
+                                                                                                                                                                                            <!--<p style="text-align:justify; text-justify:inter-ideograph;">-->
+                                                                                                                                                                                                <!--The-->
+                                                                                                                                                                                                <!--paper-->
+                                                                                                                                                                                                <!--“A-->
+                                                                                                                                                                                                <!--Delicious-->
+                                                                                                                                                                                                <!--Recipe-->
+                                                                                                                                                                                                <!--Analysis-->
+                                                                                                                                                                                                <!--Framework-->
+                                                                                                                                                                                                <!--for-->
+                                                                                                                                                                                                <!--Exploring-->
+                                                                                                                                                                                                <!--Multi-Modal-->
+                                                                                                                                                                                                <!--Recipes”has-->
+                                                                                                                                                                                                <!--been-->
+                                                                                                                                                                                                <!--accepted-->
+                                                                                                                                                                                                <!--by-->
+                                                                                                                                                                                                <!--ACM-->
+                                                                                                                                                                                                <!--MM2017.-->
+                                                                                                                                                                                            <!--</p>-->
+                                                                                                                                                                                        <!--</font>-->
+                                                                                                                                                                                    <!--</p>-->
+                                                                                                                                                                                    <font color="#666666">
+
+
+                                                                                                                                                                                    </font>
+                                                                                                                                                                                </font>
+                                                                                                                                                                            </font>
+                                                                                                                                                                        </font>
+                                                                                                                                                                    </font>
+                                                                                                                                                                </font>
+                                                                                                                                                            </font>
+                                                                                                                                                        </font>
+                                                                                                                                                    </font>
+                                                                                                                                                </font>
+                                                                                                                                            </font>
+                                                                                                                                        </font>
+                                                                                                                                    </font>
+                                                                                                                                </font>
+                                                                                                                            </font>
+                                                                                                                        </font>
+        </div>
+        <font color="#666666">
+            <font color="#666666">
+                <font color="#666666">
+                </font>
+            </font>
+        </font>
+    </div>
+    <font color="#666666">
+        <font color="#666666">
+            <font color="#666666">
+                <div id="scroll">
+                    <a title="Scroll to the top" class="top" href="./Home.html#"><img
+                            src="./FoodComputing__Home_files/top.png" alt="top"></a>
+                </div>
+                <div id="erweima">
+                    <!-- <div style="text-align:center;width:110px;border:greensolid1px;"> -->
+                    <!-- <p style="text-align: center;"> -->
+                    <img src="./FoodComputing__Home_files/二维码.png" width="110" ; height="110" ; alt="">
+                    <!-- </p> -->
+                </div>
+                <div class="db_e">
+                    <p>WebChat Public Account
+                </div>
+                <footer>
+
+                    <!-- <p>
+                        <a href="./Home.html"></a>
+                        <a href="./People.html"></a>
+                        <a href="./FoodComputing__Publication.html"></a>
+                        <a href="./FoodComputing__Dataset.html"></a>
+                    </p> -->
+
+                </footer>
+
+            </font>
+
+        </font>
+
+    </font>
+</div>
+<font color="#666666">
+    <font color="#666666">
+        <font color="#666666">
+            <!-- javascript at the bottom for fast page loading -->
+            <script type="text/javascript" src="./FoodComputing__Home_files/jquery.js.下载"></script>
+            <script type="text/javascript" src="./FoodComputing__Home_files/jquery.easing-sooper.js.下载"></script>
+            <script type="text/javascript" src="./FoodComputing__Home_files/jquery.sooperfish.js.下载"></script>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('ul.sf-menu').sooperfish();
+                    $('.top').click(function () {
+                        $('html, body').animate({
+                            scrollTop: 0
+                        }, 'fast');
+                        return false;
+                    });
+                });
+            </script>
+
+
+        </font>
+    </font>
+</font>
+</body>
+
+</html>
