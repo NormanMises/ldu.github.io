@@ -165,14 +165,20 @@
             background-size: cover; /* 确保背景图片覆盖整个header */
             background-position: center; /* 将背景图片居中显示 */
             background-repeat: no-repeat; /* 防止背景图片重复 */
-            display: flex;
+/*             display: flex; */
 /*             justify-content: center; */
 /*             align-items: center;
 /*             text-align: center; */
  /*            color: white;
             font-size: 2em; */
         }
-
+ @media (max-width: 768px) {
+            header {
+                height: 200px; /* 在手机上调整高度 */
+                background-size: contain; /* 确保背景图片包含在header内 */
+                background-position: center; /* 将背景图片居中显示 */
+            }
+        }
 
     </style>
     <header>
