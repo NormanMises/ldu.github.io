@@ -3,6 +3,7 @@
 <html>
 
 <head>
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var currentIndex = 0;
@@ -12,6 +13,7 @@
             var isSliding = false;
             var slideSpeed = 2; // Adjust the speed as needed
             var direction = 0; // 1 for next, -1 for prev
+            var autoSlideInterval;
 
             function slide() {
                 if (isSliding) {
@@ -37,27 +39,48 @@
                 isSliding = false;
             }
 
-            document.getElementById('nextButton').addEventListener('mousedown', function() {
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(function() {
+                    if (currentIndex < totalImages - 1) {
+                        currentIndex++;
+                    } else {
+                        currentIndex = 0;
+                    }
+                    ul.style.left = -(currentIndex * imageWidth) + 'px';
+                }, 3000); // Adjust the interval time as needed
+            }
+
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+
+            document.getElementById('nextButton').addEventListener('mouseenter', function() {
+                stopAutoSlide();
                 startSliding(1);
             });
 
-            document.getElementById('nextButton').addEventListener('mouseup', stopSliding);
-            document.getElementById('nextButton').addEventListener('mouseleave', stopSliding);
+            document.getElementById('nextButton').addEventListener('mouseleave', function() {
+                stopSliding();
+                startAutoSlide();
+            });
 
-            document.getElementById('prevButton').addEventListener('mousedown', function() {
+            document.getElementById('prevButton').addEventListener('mouseenter', function() {
+                stopAutoSlide();
                 startSliding(-1);
             });
 
-            document.getElementById('prevButton').addEventListener('mouseup', stopSliding);
-            document.getElementById('prevButton').addEventListener('mouseleave', stopSliding);
-
-            document.addEventListener('mouseup', stopSliding); // Ensure sliding stops when mouse is released anywhere
-            document.addEventListener('mouseleave', stopSliding); // Ensure sliding stops when mouse leaves the document
+            document.getElementById('prevButton').addEventListener('mouseleave', function() {
+                stopSliding();
+                startAutoSlide();
+            });
 
             window.addEventListener('resize', function() {
                 imageWidth = document.querySelector('.box').clientWidth;
                 ul.style.left = -(currentIndex * imageWidth) + 'px';
             });
+
+            // Start automatic sliding when the page loads
+            startAutoSlide();
         });
     </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
