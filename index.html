@@ -155,33 +155,32 @@
 <body>
 <div id="main">
    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+        /* 通用样式 */
+* {
+    margin: 0;
+    padding: 0;
+}
 
-        header {
+header {
+    background-image: url('./FoodComputing__Home_files/11.png'); /* 替换为你的图片路径 */
+    background-size: cover; /* 确保背景图片包含在header内 */
+    background-position: right; /* 将背景图片居中显示 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2em;
+}
 
-            background-image: url('./FoodComputing__Home_files/11.png'); /* 替换为你的图片路径 */
-            background-size: cover; /* 确保背景图片包含在header内 */
-            background-position: right; /* 将背景图片居中显示 */
-            background-repeat: no-repeat; /* 防止背景图片重复 */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            font-size: 2em;
-        }
-
-        /* 响应式调整 */
-        @media (max-width: 768px) {
-            header {
-                height: auto; /* 在手机上自动调整高度 */
-                padding-top: 56.25%; /* 16:9 比例 */
-                background-size: contain; /* 确保背景图片包含在header内 */
-                background-position: right; /* 将背景图片居中显示 */
-            }
-        }
+/* 手机端响应式样式 */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        padding-top: 56.25%; /* 保持16:9比例适应各种屏幕尺寸 */
+        background-size: contain;
+        background-position: right;
+    }
+}
     </style>
     <header>
         <div id="logo">
