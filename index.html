@@ -154,33 +154,31 @@
 
 <body>
 <div id="main">
-   <style>
+    <style>
         /* 通用样式 */
-* {
-    margin: 0;
-    padding: 0;
-}
+        header {
+            background-image: url('./FoodComputing__Home_files/11.png'); /* 替换为你的图片路径 */
 
-header {
-    background-image: url('./FoodComputing__Home_files/11.png'); /* 替换为你的图片路径 */
-    background-size: cover; /* 确保背景图片包含在header内 */
-    background-position: right; /* 将背景图片居中显示 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 2em;
-}
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 2em;
 
-/* 手机端响应式样式 */
-@media (max-width: 768px) {
-    header {
-        height: auto;
-        padding-top: 56.25%; /* 保持16:9比例适应各种屏幕尺寸 */
-        background-size: contain;
-        background-position: right;
-    }
-}
+            width: 100%;
+            ; /* 确保图片始终覆盖其容器 */
+            background-position: center; /* 居中图片 */
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            header {
+                height: 100vh;
+                padding-top: 0;
+            }
+        }
     </style>
     <header>
         <div id="logo">
