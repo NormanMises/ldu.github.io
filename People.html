@@ -22,12 +22,33 @@
 
 <body>
   <div id="main">
-    <style>
-      header {
-        background-image: url('./FoodComputing__Home_files/99.png'); /* 替换为你的图片路径 */
-        background-size: auto; /* 确保背景图片覆盖整个header */
-        background-position: center; /* 将背景图片居中显示 */
-      }
+<style>
+        /* 通用样式 */
+        header {
+            background-image: url('./FoodComputing__Home_files/99.png'); /* 替换为你的图片路径 */
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 2em;
+            background: object-fit: cover;
+            ; /* 确保图片始终覆盖其容器 */
+
+
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            header {
+                height: 100vh;
+                padding-top: 0;
+            }
+
+        }
     </style>
     <header>
       <div id="logo">
